@@ -1,4 +1,4 @@
-# DataPredict_Pretrained_Neural_Networks
+# DataPredict Pretrained Neural Networks
 
 This repository contains all neural network models for various tasks.
 
