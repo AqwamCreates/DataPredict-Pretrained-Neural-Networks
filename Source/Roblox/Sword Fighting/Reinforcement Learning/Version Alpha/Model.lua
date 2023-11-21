@@ -1,6 +1,3 @@
--- Release Version 1.5
--- Contributor: Aqwam Harish Aiman
-
 local function buildModel()
 	
 	local ExperienceReplay = DataPredict.ExperienceReplays.UniformExperienceReplay.new(1, 10)
