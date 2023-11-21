@@ -19,4 +19,5 @@ local function buildModel()
 	Model:setExperienceReplay(ExperienceReplay)
 
 	return Model
+
 end
