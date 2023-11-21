@@ -4,11 +4,11 @@ local function buildModel()
 	
 	local Model = DataPredict.Models.DoubleQLearningNeuralNetworkV2.new(nil, nil, nil, 1000, nil, 0.9999999)
 
-	Model:addLayer(15, true, 'Mish')
+	Model:addLayer(15, true, 'Tanh')
 
-	Model:addLayer(10, true, 'LeakyReLU')
+	Model:addLayer(10, true, 'Mish')
 
-	Model:addLayer(13, true, 'LeakyReLU')
+	Model:addLayer(6, true, 'Mish')
 
 	Model:addLayer(12, false, 'StableSoftmax')
 
