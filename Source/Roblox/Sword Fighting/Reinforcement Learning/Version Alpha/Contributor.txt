@@ -3,3 +3,5 @@ Full Name: Aqwam Harish Aiman
 GitHub Username: AqwamCreates
 
 Last Updated: 21 November 2023
+
+DataPredict Version: Release 1.5
