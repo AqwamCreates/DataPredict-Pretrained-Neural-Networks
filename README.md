@@ -19,7 +19,7 @@ For example, in the path "Roblox/Sword Fighting/Reinforcement Learning/Version A
 "Roblox" is the top-level "Platform / Subject."
 "Sword Fighting" is the second level indicating the "Task."
 
-## Models Relationship
+### Models Relationship
 
 Imagine you have two models, Model A and Model B.
 
