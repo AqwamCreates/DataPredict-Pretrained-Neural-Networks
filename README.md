@@ -25,8 +25,8 @@ Imagine you have two models, Model A and Model B.
 
 Model B is considered a variation of Model A only if:
 
-Both models take the same input types and have the same number of neurons.
-Both models produce the same output types and have the same number of neurons.
+* Both models take the same input types and have the same number of neurons.
+* Both models produce the same output types and have the same number of neurons.
 
 If these conditions aren't met, Model B is treated as different from Model A and gets its own folder.
 
