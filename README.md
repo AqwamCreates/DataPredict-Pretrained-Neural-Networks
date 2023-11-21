@@ -27,6 +27,7 @@ Model B is considered a variation of Model A only if:
 
 * Both models take the same input types and have the same number of neurons.
 * Both models produce the same output types and have the same number of neurons.
+* Both models have the same type.
 
 If these conditions aren't met, Model B is treated as different from Model A and gets its own folder.
 
