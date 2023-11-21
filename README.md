@@ -16,8 +16,8 @@ The repository is organized into different levels, each showing specific details
 
 For example, in the path "Roblox/Sword Fighting/Reinforcement Learning/Version Alpha/V1":
 
-"Roblox" is the top-level "Platform / Subject."
-"Sword Fighting" is the second level indicating the "Task."
+* "Roblox" is the top-level "Platform / Subject."
+* "Sword Fighting" is the second level indicating the "Task."
 
 ### Models Relationship
 
