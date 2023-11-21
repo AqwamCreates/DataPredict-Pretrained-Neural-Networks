@@ -20,7 +20,6 @@ local function buildModel()
 	Model:setPrintReinforcementOutput(false)
 	
 	Model:setExperienceReplay(ExperienceReplay)
-	
+
 	return Model
-	
 end
