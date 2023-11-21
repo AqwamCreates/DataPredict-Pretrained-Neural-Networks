@@ -1,3 +1,7 @@
+local InputEvent = game:GetService("ReplicatedStorage").InputEvent
+
+local NPCFolder = game:GetService("Workspace").NPCFolder
+
 local RunService = game:GetService("RunService")
 
 local Character = script.Parent
@@ -44,7 +48,7 @@ local function getClosestEnemy()
 	
 	local closestDistance = largeValue
 
-	for _, obj: Model in workspace:GetChildren() do
+	for _, obj: Model in NPCFolder:GetChildren() do
 		
 		if not obj:IsA("Model") then continue end
 		
@@ -263,6 +267,8 @@ local function senseEnvironment()
 	
 	local rewardValue = getRewardValue()
 	
+	InputEvent:Fire(IDValue, environmentVector, rewardValue)
+	
 	previousHealth = Humanoid.Health
 	
 end
@@ -270,6 +276,12 @@ end
 Humanoid.Died:Connect(function()
 
 	if Connection then Connection:Disconnect() end
+
+	InputEvent:Fire(IDValue, defaultEnvironmentVector, -1)
+	
+	task.wait()
+	
+	InputEvent:Fire(IDValue, defaultEnvironmentVector, 0)
 
 	Character:Destroy()
 
