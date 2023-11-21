@@ -229,6 +229,8 @@ local function getRewardValue()
 	
 	local closestEnemy, damageDealt, distanceDifference, distanceToEnemy = getEnemyStatus()
 	
+	local isEnemy, viewingDistance = getCurrentView()
+	
 	local noEnemy = (closestEnemy == nil)
 	
 	local idlePunishment = (noEnemy and -0.1) or 0
@@ -236,6 +238,8 @@ local function getRewardValue()
 	local isEnemyDead = (previousEnemyHealth == 0)
 	
 	local enemyDeathReward = (isEnemyDead and 0.3) or 0
+	
+	local isEnemyReward = (isEnemy and 0.1) or ((viewingDistance <= 5) and -0.3) or 0
 	
 	local healthChangeRatio = (healthChange / maxHealth)
 	
@@ -247,7 +251,7 @@ local function getRewardValue()
 	
 	local distanceChangeReward = (distanceDifference * distanceAdjustmentFactor)
 	
-	local rewardValue = healthChangeRatio + healReward + damageDealtRatio + enemyDeathReward + distanceChangeReward + idlePunishment
+	local rewardValue = healthChangeRatio + healReward + damageDealtRatio + enemyDeathReward + distanceChangeReward + idlePunishment + isEnemyReward
 	
 	return rewardValue
 	
